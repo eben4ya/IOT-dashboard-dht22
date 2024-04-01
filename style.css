@@ -261,6 +261,7 @@ main .insights > div .middle {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 23vw;
 }
 
 main .insights h3 {
@@ -274,8 +275,8 @@ main .histories {
 }
 
 main .history-charts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 2.5rem;
   background: var(--color-white);
   border-radius: var(--border-radius-1);
@@ -289,6 +290,8 @@ main .history-charts:hover {
 
 main .history-charts .history-divs {
   text-align: center;
+  /* lebar container historical */
+  width: 10rem;
 }
 
 main .histories h2 {
@@ -375,32 +378,34 @@ main .histories h2 {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   .container {
     width: 94%;
-    grid-template-columns: 7rem auto 23rem;
+    grid-template-columns: 14rem auto 26rem;
   }
   aside .logo h2 {
     display: none;
   }
 
-  aside .sidebar h3 {
+  /* aside .sidebar h3 {
     display: none;
-  }
+  } */
   aside .sidebar a {
-    width: 5.6rem;
+    width: 12.6rem;
   }
   aside .sidebar a:last-child {
     position: relative;
     margin-top: 1.8rem;
   }
   main .insights {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: row;
+    gap: 1.6rem;
   }
   main .histories {
     width: 94%;
     position: absolute;
-    left: 50%;
+    left: 56.5%;
     transform: translateX(-50%);
     margin: 2rem 0 0 8.8rem;
   }
